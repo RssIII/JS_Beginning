@@ -1,0 +1,30 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    border: 2px solid #eee;
+}
+
+.smallBorder{
+    width: auto;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.smallBorder:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 30%;
+    border-bottom: 2px solid rgb(4, 86, 110);
+}
