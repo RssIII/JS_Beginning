@@ -62,3 +62,49 @@ let x5 = 10;
 let y3 = 20;
 
 let z = x5 + y3;
+
+/* Basic Operators, maths 
+
+An operand is what operators are applied to. 
+
+5 * 2 has two operands, 5 and 2.
+
+unary means it only has one operand. */
+
+let i = 1;
+
+i = -1; // - reverses the sign of a number, so 1 = -1 here
+
+//binary has two operands
+
+let w = 1, w2 = 3;
+
+// w - w2 = 2
+
+/*
+    Addition +,
+    Subtraction -,
+    Multiplication *,
+    Division /,
+    Remainder %,
+    Exponentiation **.
+*/
+
+//String concatenation
+
+let s = "the" + "string";
+//console.log(s) => "thestring"
+
+//If you ever add a string to numbers, it will always be a string, regardless of what happens
+
+//console.log('1' + 2) => "12"
+//console.log(2 + '1') => "21"
+
+//console.log(2 + 2 + '1') => "41" => 2 + 2 is 4, then it adds it to the string '1' which = "41"
+
+//console.log('1' + 2 + 2) => "122" the first operand is a string, so everything after is treated as a string
+
+//only + treats strings like this. All other arithmetic operators work with numbers
+
+//console.log(6 - '2') => 4
+//console.log('6' / '2') => 3
