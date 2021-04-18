@@ -107,4 +107,62 @@ let s = "the" + "string";
 //only + treats strings like this. All other arithmetic operators work with numbers
 
 //console.log(6 - '2') => 4
-//console.log('6' / '2') => 3
+//console.log('6' / '2') => 
+
+
+
+
+
+/*              Strings                 */
+
+
+
+//You can use single or double qoutes for strings.
+let string = "double";
+let string2 = 'single';
+
+//A \ before a ' in a string will allow it to pass
+let string3 = 'I\'ve got a string';
+
+/*             Conditionals             */
+
+if (hour < 5) {
+    greeting = "Good day";
+}
+ else {
+     greeting = "Good night";
+ }
+
+ // Logical Operators
+
+ //|| (OR), && (AND), ! (NOT), ?? (NULLSISH)
+
+ result = a || b;
+
+ (true || true); //true
+ (false || true); //true
+ (true || false); //true
+ (false || false); //false
+
+ //OR is usually used to test if something is TRUE
+let hour = 9;
+if (hour < 10 || hour > 18) {
+    alert('Office is closed.');
+})
+
+//true
+
+let hour = 12;
+let isWeekend = true;
+
+if (hour < 10 || hour > 18 || isWeekend) {
+    alert('Office is closed');
+}
+
+//true
+
+//OR returns the first TRUE value
+//if NO value is TRUE, then it returns the LAST FALSE value
+alert(1 || 0); // 1 is returned (because it's TRUE)
+alert(null || 1); //1 is returned
+alert(undefined || null || 0); //returns 0, because it's false and last in line
