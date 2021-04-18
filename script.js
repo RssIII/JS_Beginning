@@ -137,6 +137,8 @@ if (hour < 5) {
 
  //|| (OR), && (AND), ! (NOT), ?? (NULLSISH)
 
+ //|| (OR)
+
  result = a || b;
 
  (true || true); //true
@@ -166,3 +168,81 @@ if (hour < 10 || hour > 18 || isWeekend) {
 alert(1 || 0); // 1 is returned (because it's TRUE)
 alert(null || 1); //1 is returned
 alert(undefined || null || 0); //returns 0, because it's false and last in line
+
+let firstName = "";
+let lastName = "";
+let nickName = "Super";
+
+alert(firstName || lastName || nickName || "Anonymous"); //Super, and if all variables were false, "Anonymous" would be returned
+
+//&& (AND)
+
+result = a && b; //returns TRUE if both operands are TRUE and FALSE otherwise
+
+alert(true && true); //true
+alert(false && true); //false
+alert(true && false); //false
+alert(false && false); //false
+
+let hour = 12;
+let minute = 30;
+
+if (hour == 12 && minute == 30) {
+    alert('The time is 12:30');
+}
+
+//true
+
+if (1 && 0) { // evaled as TRUE && FALSE
+    alert("Won't work because the result is FALSE");
+}
+
+//&& finds the FIRST FALSE value. If all are TRUE, returns the LAST TRUE value. It's similar to ||, it just returns the first FALSE instead of TRUE.
+
+//&& takes precedence over ||
+
+
+//! (NOT)
+result = !;
+
+// converts target operand into true/false
+// returns it's inverse value
+
+alert(!true); //returns FALSE
+alert(!0); //returns TRUE
+
+// !! is sometimes used for converting a value to a boolean
+alert(!!"non-empty string"); //true
+alert(!!null); //false
+
+//What will this code output?
+alert(null || 2 || undefined); //2, the first TRUE value
+
+//What will this code output?
+alert(alert(1) || 2 || alert(3)); // 1, 2 ==> alert(1) returns undefined, but still returns 1. Since it's undefined, it goes on to 2. alert(3) is never run because 2 has been returned as the FIRST TRUE value
+
+//What will this code output?
+alert(1 && null && 2); //null, the first FALSE output
+
+
+//What will this code output?
+alert(null || 2 && 3 || 4); // 3 => AND takes precedecne over OR, so 2 && 3 is run first, which results in 3
+
+//age is INCLUSIVLEY between 14 and 90
+if (age >= 14 && age <= 90 {
+    true;
+}
+
+else {
+    false;
+
+}//NOT between 14 and 90
+if (!(age >= 14 && age <= 90));
+
+if (age < 14 || age > 90);
+
+//Which of these statements will execute? What will the result be?
+if (-1 || 0) alert('first'); //Runs
+if (-1 && 0) alert('second');
+if (null || -1 && 1) alert('third'); //Runs
+
