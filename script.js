@@ -45,6 +45,9 @@ admin = name;
 let ourHomePlanet = 'Earth';
 let userVisitorName = "Site Visitor";
 
+//Template String - Use `` 
+console.log(`My name is ${name} and I am ${age}`;)
+
 /* Basic Number things */
 
 let x = 3.14;
@@ -245,4 +248,115 @@ if (age < 14 || age > 90);
 if (-1 || 0) alert('first'); //Runs
 if (-1 && 0) alert('second');
 if (null || -1 && 1) alert('third'); //Runs
+
+//Arrays
+const fruits = ['apples', 'oranges', 'bananas', 'cranberries', 155, true, false, 22, 'cake']; //You can have different data types (cool)
+fruits[10] = 'numbers'; //adds a 10th value
+fruits.push('11th value'); //adds at the end
+fruits.unshift('number 1');//adds to the beginning
+fruits.pop();//deletes a value
+console.log(Array.isArray('hello')); //true or false (false here)
+
+//Object literals ***
+const person = {
+    firstName: 'Rob',
+    lastName: 'Doe',
+    age: 28,
+    hobbies: ['muscic', 'strategy games', 'cooking'],
+    address: {
+        street: '123 Ave',
+        town: 'Town #3',
+    }
+}
+
+console.log(person.firstName, person.lastName); //Rob Doe
+console.log(person.hobbies[1]);// strategy games
+
+//Destructuring
+const {firstName, lastName} = person;
+console.log(firstName); //Rob
+
+//Adding property
+person.email = 'rob@gmail.com';
+
+//Array of objects
+const todos = [
+    {
+
+        id: 1,
+        text: 'clean house',
+        isCompleted: true
+
+    },
+    {
+
+        id: 2,
+        text: 'take out trash',
+        isCompleted: false
+
+    },
+    {
+
+        id: 3,
+        text: 'do dishes',
+        isCompleted: true
+
+    }
+];
+
+console.log(todos[1].text); //take out trash
+
+//Sending data to a server using JSON. Converts todos to JSON format
+const todosJSON = JSON.stringify(todos);
+
+//              LOOPS
+//FOR
+for( let i = 0; i < 10; i++)
+{
+
+};
+
+//WHILE
+let i = 0;
+while(i < 10) {
+    i++;
+};
+
+// Looping Through Arrays
+
+for( let i = 0; i < todos.length; i++)
+{
+    console.log(todos[i]); //Prints the values of todo
+};
+
+// FOR OF
+for(let todo of todos) {
+    console.log(todo.text); //Prints todo text value
+}
+
+// FOR EACH
+
+todos.forEach(function(todo) {
+    console.log(todo.text);
+});
+
+// MAP - returns an Array, in this case just the text
+
+ const todoText = todos.map(function(todo) {
+    return todo.text;
+});
+
+// FILTER - returns a filtered value, in this case all completed tasks
+
+const todoCompleted = todos.filter(function(todo) {
+    return todo.isCompleted === true;
+});
+
+//You can chain interations. This filters the TRUE valued isCompleted and prints out the text of those that are complete
+
+const todoCompleted = todos.filter(function(todo) {
+    return todo.isCompleted === true;
+}).map(function(todo){
+    return todo.text;
+})
 
