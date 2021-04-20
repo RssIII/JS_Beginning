@@ -56,10 +56,15 @@ console.log(newString);
 
 //sometimes parameters are optional, like array join()
 let myArray = ['I', 'love', 'Anna-Kay', 'my', 'fiance'];
-//returns a space between the values
 let addAString = myArray.join(' ');
+//returns a space between the values
 console.log(addAString);
 //let addAString = myArray.join();
 //returns a comma between values by default
 
+// Function SCOPE
+/* When a function is created, the variables and declarations inside that function are their own seperate SCOPE, which means they are only made available to that particular function. 
+
+The area outside of a function is call the GLOBAL SCOPE, which means that everything there can be accessed anywhere in my code.
+*/
 
